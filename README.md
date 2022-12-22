@@ -1,6 +1,6 @@
 # 연하장 프로젝트
 - 제작자 : 안정원
-- 날씨 어플 url : 
+- 연하장 url : https://port-0-newyearscard-20z52flbz7mc39.gksl2.cloudtype.app/
 
 # 제작 목표
 - 가족에게 2023년 연하장을 보내고 간단한 덕담을 남기거나 삭제할 수 있는 게시판을 만든다. (node.js, ejs, fileDB 를 기반으로 만든다.)
