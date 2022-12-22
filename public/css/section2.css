@@ -1,5 +1,4 @@
 /* section2 */
-
 .section2 {
   width: 100%;
 }
@@ -14,7 +13,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 630px;
+  height: 100vh;
 }
 
 .swiper {
