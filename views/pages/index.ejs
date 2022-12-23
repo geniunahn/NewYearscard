@@ -161,7 +161,7 @@
       <div class="max_width_wrap">
         <div class="section_wrap section3">
           <h1
-            data-aos="fade-down"
+            data-aos="fade-up"
             data-aos-delay="50"
             data-aos-duration="1500"
             data-aos-easing="ease-in-out"
@@ -222,7 +222,23 @@
                 </div>
               </div>
               <div class="list_content">
-                <p><%= textArr[i] %></p>
+                <div class="list_update">
+                  <p><%= textArr[i] %></p>
+                  <p class="up_button">글 수정하기</p>
+                  <form action="/update/<%= i %>" method="post">
+                    <!-- 수정하면 생성되는 textarea 정보
+                      <textarea
+                      type="text"
+                      name="textUpdate"
+                      rows="4"
+                      cols="50"
+                      placeholder="여기에 수정할 글을 작성해 주세요."
+                      required
+                      maxlength="255"
+                    ></textarea> -->
+                    <button type="submit">수정하기</button>
+                  </form>
+                </div>
               </div>
             </div>
             <% } %>

@@ -1,3 +1,4 @@
+// date
 $(function () {
   function nowDate() {
     Number.prototype.pad = function (digits) {
@@ -30,4 +31,31 @@ $(function () {
   }
 
   nowDate();
+});
+
+// update
+$(function () {
+  let textareaAttr = {
+    type: "text",
+    name: "textUpdate",
+    rows: 4,
+    cols: 50,
+    placeholder: "여기에 수정할 글을 작성해 주세요.",
+    maxlength: 255,
+    required: "",
+  };
+
+  $(".list_update .up_button").on("click", function () {
+    $(this).empty();
+    $(this).prev().empty();
+    $(this).next().prepend("<textarea></textarea>");
+    $(this).next().find("textarea").attr(textareaAttr);
+    $(this).next().addClass("active");
+
+    // $(".list_update textarea").attr(textareaAttr);
+    // $(".list_update form").addClass("active");
+    // $(".list_update form").prepend("<textarea></textarea>");
+    // $(".list_update textarea").attr(textareaAttr);
+    // $(".list_update form").addClass("active");
+  });
 });

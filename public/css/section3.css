@@ -5,7 +5,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   width: 100%;
-  padding: 0 0 20px 0;
+  padding: 0 0 50px 0;
 }
 
 .section3 h1 {
@@ -49,6 +49,8 @@
   border: 0;
   border-radius: 10px;
   margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .form_wrap form textarea::placeholder,
@@ -100,4 +102,40 @@
 .list_wrap {
   overflow-y: scroll;
   height: 450px;
+}
+
+.list_update {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list_update form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  display: none;
+  /* display: flex; */
+}
+
+.list_update form textarea {
+  border-radius: 10px;
+  border: 1px solid #d7a870;
+  outline: 0;
+  padding: 10px;
+  flex: 8;
+}
+.list_update form button {
+  border-radius: 10px;
+  border: 1px solid #d7a870;
+  background-color: #fff;
+  outline: 0;
+  padding: 5px;
+  margin: 0 0 0 20px;
+  flex: 2;
+}
+
+.list_update form.active {
+  display: flex;
 }

@@ -45,6 +45,7 @@ app.post("/create", function (req, res) {
   res.redirect("/");
 });
 
+// delete
 app.post("/delete/:id", function (req, res) {
   const id = req.params.id;
   nameArr.splice(id, 1);
@@ -53,6 +54,15 @@ app.post("/delete/:id", function (req, res) {
   fs.writeFileSync("nameDB.json", JSON.stringify(nameArr));
   fs.writeFileSync("textDB.json", JSON.stringify(textArr));
   fs.writeFileSync("dateDB.json", JSON.stringify(dateArr));
+  res.redirect("/");
+});
+
+// update
+app.post("/update/:id", function (req, res) {
+  const uptext = req.body.textUpdate;
+  const upid = req.params.id;
+  textArr.splice(upid, 1, uptext);
+  fs.writeFileSync("textDB.json", JSON.stringify(textArr));
   res.redirect("/");
 });
 
