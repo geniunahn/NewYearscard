@@ -139,3 +139,13 @@
 .list_update form.active {
   display: flex;
 }
+
+.up_text {
+  flex: 8;
+}
+
+.up_button {
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+}
