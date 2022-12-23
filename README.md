@@ -1,5 +1,6 @@
 # 연하장 프로젝트
 - 제작자 : 안정원
+- 깃허브 url : https://github.com/geniunahn/NewYearscard
 - 연하장 url : https://port-0-newyearscard-20z52flbz7mc39.gksl2.cloudtype.app/
 
 # 제작 목표
