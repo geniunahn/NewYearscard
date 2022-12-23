@@ -12,7 +12,7 @@
 - 덕팜 게시판의 글을 삭제할 수 있는 기능을 구현함
 - 슬라이드 이벤트, 스크롤 애니메이션 이벤트 구현함.
 
-# 기술 설명
+# 디자인 및 기술 설명
 
 ![1](https://user-images.githubusercontent.com/106502672/209252433-cbc5260c-9383-4af2-ba6f-8486d7a87e40.jpg)
 ![2](https://user-images.githubusercontent.com/106502672/209252440-03958072-9989-4d1c-9992-d1483230706e.jpg)
