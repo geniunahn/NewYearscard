@@ -15,7 +15,7 @@
 # 디자인 및 기술 설명
 
 ![1](https://user-images.githubusercontent.com/106502672/209252433-cbc5260c-9383-4af2-ba6f-8486d7a87e40.jpg)
-![2](https://user-images.githubusercontent.com/106502672/209252440-03958072-9989-4d1c-9992-d1483230706e.jpg)
+![2](https://user-images.githubusercontent.com/106502672/209252820-8a5e7890-2de5-40c3-86b6-aa7ca0d05c0d.jpg)
 ![3](https://user-images.githubusercontent.com/106502672/209252447-21c01205-a285-4777-b511-54295c695c0c.jpg)
 
 # TO DO LIST
