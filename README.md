@@ -20,6 +20,8 @@
 
 ![1](https://user-images.githubusercontent.com/106502672/209252433-cbc5260c-9383-4af2-ba6f-8486d7a87e40.jpg)
 ![2](https://user-images.githubusercontent.com/106502672/209252820-8a5e7890-2de5-40c3-86b6-aa7ca0d05c0d.jpg)
+![3](https://user-images.githubusercontent.com/106502672/209268270-69f66d0c-9433-47c8-b96e-5c99aa539a52.jpg)
+![4](https://user-images.githubusercontent.com/106502672/209268277-3c29a7c0-3673-45bf-9b25-5afa3068fc8b.jpg)
 
 # 사용 후기
 
