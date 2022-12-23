@@ -148,4 +148,15 @@
   flex: 2;
   display: flex;
   justify-content: flex-end;
+  cursor: pointer;
+}
+
+.list_right button i {
+  cursor: pointer;
+}
+
+textarea,
+input,
+button {
+  cursor: pointer;
 }
