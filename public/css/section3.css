@@ -125,6 +125,7 @@
   outline: 0;
   padding: 10px;
   flex: 8;
+  resize: none;
 }
 .list_update form button {
   border-radius: 10px;
