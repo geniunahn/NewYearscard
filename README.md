@@ -6,7 +6,7 @@
 # 제작 목표
 - node.js, ejs, fileDB 를 활용하여 가족에게 2023년 연하장을 보내고 간단한 덕담을 남기고, 수정하고 삭제할 수 있는 CRUD 게시판을 만든다. 
 
-# 디자인 및 기술 설명
+# 디자인 및 적용기술 설명
 
 ![1](https://user-images.githubusercontent.com/106502672/209252433-cbc5260c-9383-4af2-ba6f-8486d7a87e40.jpg)
 ![2](https://user-images.githubusercontent.com/106502672/209252820-8a5e7890-2de5-40c3-86b6-aa7ca0d05c0d.jpg)
