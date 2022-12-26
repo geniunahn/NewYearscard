@@ -1,9 +1,11 @@
 # 연하장 프로젝트
 - 제작자 : 안정원
 - 깃허브 url : https://github.com/geniunahn/NewYearscard
-- 연하장 url : https://port-0-newyearscard-20z52flbz7mc39.gksl2.cloudtype.app/
+- 프로젝트 url : https://port-0-newyearscard-20z52flbz7mc39.gksl2.cloudtype.app/
 
-# 제작 목표
+# 제작 상황 및 목표
+- 제작 상황 : 
+- 제작 목표 :
 - node.js, ejs, fileDB 를 활용하여 가족에게 2023년 연하장을 보내고 간단한 덕담을 남기고, 수정하고 삭제할 수 있는 CRUD 게시판을 만든다. 
 
 # 디자인 및 적용기술 설명
@@ -12,6 +14,9 @@
 ![2](https://user-images.githubusercontent.com/106502672/209252820-8a5e7890-2de5-40c3-86b6-aa7ca0d05c0d.jpg)
 ![3](https://user-images.githubusercontent.com/106502672/209268270-69f66d0c-9433-47c8-b96e-5c99aa539a52.jpg)
 ![4](https://user-images.githubusercontent.com/106502672/209268277-3c29a7c0-3673-45bf-9b25-5afa3068fc8b.jpg)
+
+# 제작 과정에서의 문제와 극복 과정
+-
 
 # 사용 후기
 
@@ -30,3 +35,6 @@
 
 # TO DO LIST
 - 연하장 덕담 게시판에 비밀번호를 설정하게 하여 사용자만 삭제할 수 있도록 한다. 수정하거나 삭제하고 싶을 경우 비밀번호를 입력하도록 한다.
+
+
+
