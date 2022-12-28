@@ -157,6 +157,7 @@
           </div>
         </div>
       </div>
+
       <!-- section3 -->
       <div class="max_width_wrap">
         <div class="section_wrap section3">
@@ -175,6 +176,7 @@
             data-aos-duration="1500"
             data-aos-easing="ease-in-out"
           >
+            <!-- 덕담 글 입력 form -->
             <form action="/create" method="post">
               <textarea
                 class="first_input"
@@ -194,6 +196,14 @@
                 required
                 maxlength="20"
               />
+              <input
+                class="pwd_input"
+                type="password"
+                name="pwd"
+                placeholder="비밀번호를 입력해주세요."
+                required
+                maxlength="4"
+              />
               <input class="date_input" type="hidden" name="date" value="" />
               <button type="submit">보내기</button>
             </form>
@@ -205,16 +215,29 @@
             data-aos-duration="1500"
             data-aos-easing="ease-in-out"
           >
-            <!-- 덕담 -->
+            <!-- 덕담 댓글 생성 -->
             <% for(let i = nameArr.length - 1; i >= 0; i--) { %>
+
             <div class="list_box">
               <div class="list_upper">
                 <div class="list_left">
                   <p class="list_name"><%= nameArr[i] %></p>
                   <p class="list_date"><%= dateArr[i] %></p>
                 </div>
+
                 <div class="list_right">
+                  <div class="delete_icon">
+                    <i class="fa-solid fa-trash fa-2x"></i>
+                  </div>
                   <form action="/delete/<%= i %>" method="post">
+                    <!-- 삭제시 생성되는 input 정보
+                      <input
+                      type="password"
+                      name="pwd_delete"
+                      placeholder="비밀번호"
+                      maxlength="4"
+                      required
+                    /> -->
                     <button type="submit">
                       <i class="fa-solid fa-trash fa-2x"></i>
                     </button>
@@ -236,7 +259,17 @@
                       required
                       maxlength="255"
                     ></textarea> -->
-                    <button type="submit">수정하기</button>
+                    <div class="pwd_box">
+                      <!-- 수정하면 생성되는 input 정보
+                        <input 
+                      type="password"
+                      name="pwd_update" 
+                      placeholder="비밀번호"
+                      maxlength="4"
+                      required
+                      > -->
+                      <button type="submit">수정하기</button>
+                    </div>
                   </form>
                 </div>
               </div>
@@ -247,7 +280,6 @@
         </div>
       </div>
     </div>
-
     <script>
       AOS.init();
     </script>

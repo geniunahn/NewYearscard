@@ -29,6 +29,7 @@
   border: 1px solid #d7a870;
   outline: 0;
   padding: 10px;
+  resize: none;
 }
 
 .last_input {
@@ -38,6 +39,16 @@
   border: 1px solid #d7a870;
   outline: 0;
   margin: 5px 0;
+  padding: 0 10px;
+}
+
+.pwd_input {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #d7a870;
+  outline: 0;
+  margin: 5px 0 10px 0;
   padding: 0 10px;
 }
 
@@ -54,7 +65,10 @@
 }
 
 .form_wrap form textarea::placeholder,
-.form_wrap form input::placeholder {
+.form_wrap form input::placeholder,
+.list_update textarea::placeholder,
+.list_update input::placeholder,
+.list_right input::placeholder {
   color: #d7a870;
 }
 
@@ -81,6 +95,40 @@
   font-weight: 500;
   color: #828282;
   margin: 0 0 10px 0;
+}
+
+.delete_icon {
+  color: #d7a870;
+}
+
+.delete_icon.active {
+  display: none;
+}
+
+.list_right form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list_right form {
+  display: none;
+}
+
+.list_right form.active {
+  display: flex;
+  align-items: center;
+}
+
+.list_right input {
+  border-radius: 10px;
+  border: 1px solid #d7a870;
+  background-color: #fff;
+  outline: 0;
+  padding: 7px 5px;
+  margin: 0 10px 0 0;
+  width: 65px;
+  text-align: center;
 }
 
 .list_right button {
@@ -127,14 +175,31 @@
   flex: 8;
   resize: none;
 }
+
+.list_update form div {
+  flex: 2;
+}
+
 .list_update form button {
   border-radius: 10px;
   border: 1px solid #d7a870;
   background-color: #fff;
   outline: 0;
   padding: 5px;
-  margin: 0 0 0 20px;
+  color: #d7a870;
+  /* margin: 0 0 0 20px; */
   flex: 2;
+}
+
+.list_update form input {
+  border-radius: 10px;
+  border: 1px solid #d7a870;
+  background-color: #fff;
+  outline: 0;
+  padding: 7px 5px;
+  margin: 0 0 10px 0;
+  width: 65px;
+  text-align: center;
 }
 
 .list_update form.active {
@@ -160,4 +225,11 @@ textarea,
 input,
 button {
   cursor: pointer;
+}
+
+.pwd_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

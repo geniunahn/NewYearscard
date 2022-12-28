@@ -45,17 +45,40 @@ $(function () {
     required: "",
   };
 
+  let pwdAttr = {
+    type: "password",
+    name: "pwd_update",
+    placeholder: "비밀번호",
+    maxlength: 4,
+    required: "",
+  };
+
   $(".list_update .up_button").on("click", function () {
     $(this).empty();
     $(this).prev().empty();
     $(this).next().prepend("<textarea></textarea>");
     $(this).next().find("textarea").attr(textareaAttr);
+    $(this).next().find("div").prepend("<input></input>");
+    $(this).next().find("div input").attr(pwdAttr);
     $(this).next().addClass("active");
+  });
+});
 
-    // $(".list_update textarea").attr(textareaAttr);
-    // $(".list_update form").addClass("active");
-    // $(".list_update form").prepend("<textarea></textarea>");
-    // $(".list_update textarea").attr(textareaAttr);
-    // $(".list_update form").addClass("active");
+// delete
+
+$(function () {
+  let pwdAttr = {
+    type: "password",
+    name: "pwd_delete",
+    placeholder: "비밀번호",
+    maxlength: 4,
+    required: "",
+  };
+
+  $(".delete_icon").on("click", function () {
+    $(this).addClass("active");
+    $(this).next().addClass("active");
+    $(this).next().prepend("<input/>");
+    $(this).next().find("input").attr(pwdAttr);
   });
 });
