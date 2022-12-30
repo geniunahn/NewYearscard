@@ -11,7 +11,7 @@
 # 디자인 및 적용기술 설명
 
 ![1](https://user-images.githubusercontent.com/106502672/209252433-cbc5260c-9383-4af2-ba6f-8486d7a87e40.jpg)
-![2](https://user-images.githubusercontent.com/106502672/210083842-b7fd3e06-74b7-441d-85d1-2e211137b535.jpg)
+![2](https://user-images.githubusercontent.com/106502672/210083935-895f32e7-ca8c-4553-abd5-54cd6286ad3a.jpg)
 ![3](https://user-images.githubusercontent.com/106502672/210083422-ba83834a-ee4d-49c0-9a73-366a52ddd5a0.jpg)
 
 # 제작 과정에서의 문제와 극복 과정
