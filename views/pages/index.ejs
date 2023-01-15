@@ -216,13 +216,13 @@
             data-aos-easing="ease-in-out"
           >
             <!-- 덕담 댓글 생성 -->
-            <% for(let i = nameArr.length - 1; i >= 0; i--) { %>
+            <% for(let i = dbArr.length - 1; i >= 0; i--) { %>
 
             <div class="list_box">
               <div class="list_upper">
                 <div class="list_left">
-                  <p class="list_name"><%= nameArr[i] %></p>
-                  <p class="list_date"><%= dateArr[i] %></p>
+                  <p class="list_name"><%= dbArr[i].이름 %></p>
+                  <p class="list_date"><%= dbArr[i].날짜 %></p>
                 </div>
 
                 <div class="list_right">
@@ -246,7 +246,7 @@
               </div>
               <div class="list_content">
                 <div class="list_update">
-                  <p class="up_text"><%= textArr[i] %></p>
+                  <p class="up_text"><%= dbArr[i].내용 %></p>
                   <p class="up_button">수정하기</p>
                   <form action="/update/<%= i %>" method="post">
                     <!-- 수정하면 생성되는 textarea 정보

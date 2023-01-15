@@ -4,25 +4,12 @@ const ejs = require("ejs");
 const fs = require("fs");
 const { send } = require("process");
 
-let nameArr = [];
-let textArr = [];
-let dateArr = [];
-let pwdArr = [];
+let dbArr = [];
 
-const nameFile = fs.readFileSync("nameDB.json", "utf-8");
-const textFile = fs.readFileSync("textDB.json", "utf-8");
-const dateFile = fs.readFileSync("dateDB.json", "utf-8");
-const pwdFile = fs.readFileSync("pwdDB.json", "utf-8");
+const dbFile = fs.readFileSync("DB.json", "utf-8");
+const dbData = JSON.parse(dbFile);
 
-const nameData = JSON.parse(nameFile);
-const textData = JSON.parse(textFile);
-const dateData = JSON.parse(dateFile);
-const pwdData = JSON.parse(pwdFile);
-
-nameArr = [...nameData];
-textArr = [...textData];
-dateArr = [...dateData];
-pwdArr = [...pwdData];
+dbArr = [...dbData];
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -32,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // home
 app.get("/", function (req, res) {
-  res.render("pages/index.ejs", { nameArr, textArr, dateArr });
+  res.render("pages/index.ejs", { dbArr });
 });
 
 // create
@@ -42,14 +29,9 @@ app.post("/create", function (req, res) {
   const date = req.body.date;
   const pwd = req.body.pwd;
 
-  nameArr.push(name);
-  textArr.push(text);
-  dateArr.push(date);
-  pwdArr.push(pwd);
-  fs.writeFileSync("nameDB.json", JSON.stringify(nameArr));
-  fs.writeFileSync("textDB.json", JSON.stringify(textArr));
-  fs.writeFileSync("dateDB.json", JSON.stringify(dateArr));
-  fs.writeFileSync("pwdDB.json", JSON.stringify(pwdArr));
+  dbArr.push({ 이름: name, 내용: text, 날짜: date, 비번: pwd });
+
+  fs.writeFileSync("DB.json", JSON.stringify(dbArr));
   res.redirect("/");
 });
 
@@ -57,15 +39,9 @@ app.post("/create", function (req, res) {
 app.post("/delete/:id", function (req, res) {
   const id = req.params.id;
   const pwdDelete = req.body.pwd_delete;
-  if (pwdDelete == pwdArr[id]) {
-    nameArr.splice(id, 1);
-    textArr.splice(id, 1);
-    dateArr.splice(id, 1);
-    pwdArr.splice(id, 1);
-    fs.writeFileSync("nameDB.json", JSON.stringify(nameArr));
-    fs.writeFileSync("textDB.json", JSON.stringify(textArr));
-    fs.writeFileSync("dateDB.json", JSON.stringify(dateArr));
-    fs.writeFileSync("pwdDB.json", JSON.stringify(pwdArr));
+  if (pwdDelete == dbArr[id].비번) {
+    dbArr.splice(id, 1);
+    fs.writeFileSync("DB.json", JSON.stringify(dbArr));
     res.redirect("/");
   } else {
     res.redirect("/");
@@ -78,9 +54,9 @@ app.post("/update/:id", function (req, res) {
   const pwdUpdate = req.body.pwd_update;
   const uptext = req.body.textUpdate;
 
-  if (pwdUpdate == pwdArr[upid]) {
-    textArr.splice(upid, 1, uptext);
-    fs.writeFileSync("textDB.json", JSON.stringify(textArr));
+  if (pwdUpdate == dbArr[upid].비번) {
+    dbArr[upid].내용 = uptext;
+    fs.writeFileSync("DB.json", JSON.stringify(dbArr));
     res.redirect("/");
   } else {
     res.redirect("/");
